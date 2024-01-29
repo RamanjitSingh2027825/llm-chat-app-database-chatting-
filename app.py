@@ -28,7 +28,7 @@ def process_uploaded_file(uploaded_file):
 
 dot_env_file = st.sidebar.file_uploader(
     label="Upload .env file containing AZURE API and AZURE ENDPOINT",
-    type=['.txt']
+    type=['.env']
 )
 
 if not dot_env_file:
