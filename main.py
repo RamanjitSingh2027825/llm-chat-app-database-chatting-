@@ -10,15 +10,14 @@ from langchain_core.prompts import (
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import SystemMessage
 from langchain.agents import create_openai_functions_agent, AgentExecutor
+from dotenv import load_dotenv
 
 # create get_agent_executor function
-def get_agent_executor(api_key, azure_endpoint):
+def get_agent_executor():
     llm = AzureChatOpenAI(
         openai_api_version = "2023-09-01-preview",
         azure_deployment= "gpt-35-turbo-16k",
         model_name="gpt-35-turbo-16k",
-        api_key = api_key,
-        azure_endpoint = azure_endpoint
     )
 
     # tool
