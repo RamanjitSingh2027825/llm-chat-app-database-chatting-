@@ -1,0 +1,25 @@
+{
+"Database Name": "project2",
+  "Tables": [
+    {
+      "Table Name": "Marks",
+      "Description": "Stores student'smarks in various subjects."
+    },
+    {
+      "Table Name": "Professors",
+      "Description": "Contains details about professors, including their ID, name, age, gender, salary, educational background, and years of service."
+    },
+    {
+      "Table Name": "Subjects",
+      "Description": "Represents different subjects with unique IDs and restricted names."
+    },
+    {
+      "Table Name": "ProfessorSubjects",
+      "Description": "Establishes relationships between professors and subjects, forming a many-to-many association."
+    },
+    {
+      "Table Name": "WeeklySchedule",
+      "Description": "Stores a schedule for professors, indicating the day, period, and associated subject."
+    }
+  ]
+}

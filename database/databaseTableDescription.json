@@ -1,0 +1,60 @@
+{
+  "Database Name": "project2",
+  "Tables": [
+    {
+      "Table Name": "Marks",
+      "Description": {
+        "StudentID": "Unique identifier for each student.",
+        "StudentName": "Name of the student.",
+        "Chemistry": "Student's marks in the Chemistry subject.",
+        "Mathematics": "Student's marks in the Mathematics subject.",
+        "PhysicalEducation": "Student's marks in Physical Education.",
+        "ForeignLanguage": "Student's marks in Foreign Language.",
+        "Art": "Student's marks in the Art subject.",
+        "Economics": "Student's marks in Economics.",
+        "Physics": "Student's marks in Physics.",
+        "EnglishLanguageArts": "Student's marks in English Language Arts."
+      }
+    },
+    {
+      "Table Name": "Professors",
+      "Description": {
+        "ProfessorID": "Unique identifier for each professor; automatically incremented.",
+        "ProfessorName": "Name of the professor.",
+        "Age": "Age of the professor.",
+        "Gender": "Gender of the professor; allowed values are 'Male' or 'Female'.",
+        "Salary": "Salary information of the professor.",
+        "EducationalBackground": "Details about the educational background of the professor.",
+        "YearsOfService": "Number of years the professor has served in their role."
+      }
+    },
+    {
+      "Table Name": "Subjects",
+      "Description": {
+        "SubjectID": "Unique identifier for each subject; automatically incremented.",
+        "SubjectName": "Name of the subject; restricted to specific values."
+      }
+    },
+    {
+      "Table Name": "ProfessorSubjects",
+      "Description": {
+        "ProfessorID": "Foreign key referencing the 'ProfessorID' in the 'Professors' table.",
+        "SubjectID": "Foreign key referencing the 'SubjectID' in the 'Subjects' table.",
+        "PRIMARY KEY (ProfessorID, SubjectID)": "Ensures the combination of 'ProfessorID' and 'SubjectID' is unique; serves as the composite primary key.",
+        "FOREIGN KEY (ProfessorID)": "Establishes a relationship with the 'ProfessorID' column in the 'Professors' table.",
+        "FOREIGN KEY (SubjectID)": "Establishes a relationship with the 'SubjectID' column in the 'Subjects' table."
+      }
+    },
+    {
+      "Table Name": "WeeklySchedule",
+      "Description": {
+        "Day": "Represents the day of the week for the schedule.",
+        "Period": "Indicates the specific period or time slot for the scheduled activity.",
+        "SubjectID": "Foreign key referencing the 'SubjectID' in the 'Subjects' table; connects the schedule to a specific subject.",
+        "ProfessorID": "Foreign key referencing the 'ProfessorID' in the 'Professors' table; associates the schedule with a specific professor.",
+        "FOREIGN KEY (SubjectID)": "Establishes a relationship with the 'SubjectID' column in the 'Subjects' table.",
+        "FOREIGN KEY (ProfessorID)": "Establishes a relationship with the 'ProfessorID' column in the 'Professors' table."
+      }
+    }
+  ]
+}
