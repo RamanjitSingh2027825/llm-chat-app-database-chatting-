@@ -4,13 +4,13 @@ import sqlite3
 
 # databaseDescription function
 def describe_database(none):
-    path = "database\\databaseDescription.json"
+    path = "/mount/src/llm-chat-app-database-chatting-/database/databaseDescription.json"
     with open(path, "r") as file:
         return json.load(file)
 
 # databaseTableDescription function
 def describe_table(table_name):
-    path = "database\\databaseTableDescription.json"
+    path = "/mount/src/llm-chat-app-database-chatting-/database/databaseTableDescription.json"
     with open(path, "r") as file:
         database_description = json.load(file)
 
@@ -29,7 +29,7 @@ def describe_table(table_name):
 def run_sqlite_query(query : str):
     """Takes an SQL query and returns result"""
 
-    connection = sqlite3.connect("database\\project2.db")
+    connection = sqlite3.connect("/mount/src/llm-chat-app-database-chatting-/database/project2.db")
 
     cursor = connection.cursor()
     try:

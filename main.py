@@ -10,7 +10,6 @@ from langchain_core.prompts import (
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import SystemMessage
 from langchain.agents import create_openai_functions_agent, AgentExecutor
-from dotenv import load_dotenv
 
 # create get_agent_executor function
 def get_agent_executor():
